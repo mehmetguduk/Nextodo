@@ -1,9 +1,13 @@
+/*
+    THIS FILE WAS DEVELOPED BY MEHMET GUDUK
+    © 2022 COPYRIGHT, LICENSED WITH GPL-3.0 LICENSE, AUTHOR IS MEHMET GUDUK
+    https://github.com/mehmetguduk
+*/
+
 import React from 'react'
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { TiTrash, TiEdit, TiTickOutline } from "react-icons/ti";
 import { MdOutlineSettingsBackupRestore, MdDragHandle } from "react-icons/md";
-
-
 
 export default function Todos(props) {
 

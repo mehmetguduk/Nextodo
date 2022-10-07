@@ -1,6 +1,11 @@
+/*
+    THIS FILE WAS DEVELOPED BY MEHMET GUDUK
+    © 2022 COPYRIGHT, LICENSED WITH GPL-3.0 LICENSE, AUTHOR IS MEHMET GUDUK
+    https://github.com/mehmetguduk
+*/
+
 import React from "react";
 import { MdOutlineDeleteSweep, MdOutlineClose } from "react-icons/md";
-
 
 export default function Tools(props) {
     const [clearALLtoggle, setCLEARallTOGGLE] = React.useState(false)
