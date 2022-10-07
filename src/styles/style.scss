@@ -105,9 +105,9 @@ div.App.intro {
         }
 
         &:hover {
-            filter: drop-shadow(0px 0px 10px var(--color10)) hue-rotate(15deg);
-            -webkit-filter: drop-shadow(0px 0px 10px var(--color10)) hue-rotate(15deg);
-            -moz-filter: drop-shadow(0px 0px 10px var(--color10)) hue-rotate(15deg);
+            filter: drop-shadow(0px 0px 10px var(--color10));
+            -webkit-filter: drop-shadow(0px 0px 10px var(--color10));
+            -moz-filter: drop-shadow(0px 0px 10px var(--color10));
         }
     }
 
