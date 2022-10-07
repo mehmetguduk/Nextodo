@@ -1,0 +1,93 @@
+@import "./style.scss";
+
+ul.todos {
+    list-style-type: none;
+    user-select: none;
+
+    li.todo {
+        @include button(var(--color7), var(--color14), var(--color4), 3px);
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0;
+        padding: 5px;
+        justify-content: space-between;
+        position: relative;
+
+        div.todo-content {
+            display: flex;
+            flex-direction: row;
+
+            div.todo-drag-icon {
+                display: flex;
+                align-self: center;
+                font-size: 20px;
+            }
+
+            p.todo-text {
+                text-align: left;
+                font-family: var(--fontfamily1);
+                width: 100%;
+                align-self: center;
+                word-wrap: break-word;
+                overflow: auto;
+                margin: 0 5px;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            div.todo-button-container {
+                display: flex;
+                flex-direction: row;
+                align-self: flex-start;
+
+                button.button.complete {
+                    font-size: 20px;
+                    @include button(var(--color9), var(--color14), var(--color4), 2px);
+                    transition: 0.1s transform, 0.1s box-shadow, 0.1s border-color;
+                }
+                button.button.edit {
+                    font-size: 20px;
+                    @include button(var(--color8), var(--color14), var(--color4), 2px);
+                    transition: 0.1s transform, 0.1s box-shadow, 0.1s border-color;
+                }
+                button.button.delete {
+                    font-size: 20px;
+                    @include button(var(--color3), var(--color14), var(--color4), 2px);
+                    transition: 0.1s transform, 0.1s box-shadow, 0.1s border-color;
+                }
+            }
+        }
+
+        p.todo-date {
+            display: none;
+            font-family: var(--fontfamily2);
+            font-size: 13px;
+            color: var(--color14);
+            opacity: 0.5;
+            margin-top: 5px;
+            text-align: right;
+        }
+    }
+
+    li.todo.completed {
+        background-color: var(--color13);
+
+        p.todo-text {
+            color: var(--color15);
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        p.todo-date {
+            color: var(--color15);
+        }
+    }
+
+    li.todo.detailed {
+        p.todo-date {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import "./style.scss";
+
+div.tools-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin: 10px 0 10px 0;
+    font-family: var(--fontfamily2);
+
+    div.clear-all-container {
+        button.button.clear-all {
+            @include button(var(--color3), var(--color14), var(--color4), 3px);
+            transition: 0.1s transform, 0.1s box-shadow, 0.1s border-color;
+            display: flex;
+            padding: 4px;
+            font-size: 13px;
+            white-space: nowrap;
+
+            span.clear-icon {
+                margin-left: 5px;
+                font-size: 20px;
+            }
+        }
+
+        div.clear-all-certain {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            color: var(--color15);
+            background-color: var(--color11);
+            user-select: none;
+
+            &:hover {
+                transform: translate(-3px, -3px);
+                box-shadow: var(--color4) 3px 3px;
+            }
+
+            p.clear-all-question {
+                font-size: 14px;
+            }
+
+            div.certain-buttons {
+                display: flex;
+                flex-direction: column;
+
+                button.button.yes {
+                    @include button(var(--color3), var(--color14), var(--color4), 2px);
+                    transition: 0.1s transform, 0.1s box-shadow, 0.1s border-color;
+
+                    padding: 2px;
+                    font-size: 20px;
+                    margin: 2px 0 1px 0;
+                }
+                button.button.cancel {
+                    @include button(var(--color9), var(--color14), var(--color4), 2px);
+                    transition: 0.1s transform, 0.1s box-shadow, 0.1s border-color;
+
+                    padding: 2px;
+                    font-size: 20px;
+                    margin: 1px 0 2px 0;
+                }
+            }
+        }
+    }
+
+    div.todo-counter-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color16);
+        color: var(--color15);
+        width: 100%;
+        padding: 2px;
+        margin-left: 10px;
+        border-radius: 1px;
+        user-select: none;
+        transition: 0.1s transform, 0.1s box-shadow;
+
+        &:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: var(--color4) 3px 3px;
+        }
+
+        p.counter {
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}

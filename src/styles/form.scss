@@ -1,0 +1,42 @@
+@import "./style.scss";
+
+form.new-todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    input.new-todo-text {
+        font-family: var(--fontfamily1);
+        font-size: 16px;
+        line-height: 20px;
+        overflow: scroll;
+        color: var(--color15);
+        border: var(--color1) 1px solid;
+        border-radius: 1px;
+        height: 35px;
+        width: 100%;
+        padding: 0 8px;
+        transition: 0.1s transform, 0.1s box-shadow, 0.1s border-color;
+
+        &:focus {
+            border-color: var(--color12);
+            outline: none;
+        }
+
+        &:hover,
+        &:focus {
+            transform: translate(-3px, -3px);
+            box-shadow: var(--color4) 3px 3px;
+        }
+    }
+
+    button.button.new {
+        @include button(var(--color1), var(--color14), var(--color4), 3px);
+        transition: 0.1s transform, 0.1s box-shadow, 0.1s border-color;
+        margin-left: 10px;
+        padding: 2px;
+        font-size: 24px;
+        width: 35px;
+        height: 35px;
+    }
+}

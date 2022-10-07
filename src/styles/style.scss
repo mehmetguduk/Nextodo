@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Roboto+Mono&display=swap");
+
+:root {
+    --fontfamily1: "Nunito", sans-serif;
+    --fontfamily2: "Roboto Mono", monospace;
+    --color1: #7b7dcf; //    # General theme color
+    --color2: #e4e4e4; //    # Main background color
+    --color3: #e05353; //    # Clear All, Yes and Delete button color
+    --color4: #808080; //    # General shadow color
+    --color5: #579457; //    # Filter button background color
+    --color6: #6f996ffb; //  # Filter item background color
+    --color7: #78649c; //    # Todo background color
+    --color8: #e0ae42; //    # Edit button background color
+    --color9: #579457; //    # Complete and Cancel button background color
+    --color10: #c0c0c0; //   # Logo shadow color
+    --color11: #f8f86e; //   # Clear certain background color
+    --color12: #707070; //   # Input:focus border color
+    --color13: #b6b6b6dc; // # Completed todo background color
+    --color14: #ffffff; //   # Main text color
+    --color15: #4e4e4e; //   # Secondary text color
+    --color16: #f5deb3; //   # Counter background color
+}
+
+@mixin button($backgroundcolor, $textcolor, $shadowcolor, $borderpixel) {
+    border-radius: 1px;
+    font-family: var(--fontfamily2);
+    line-height: 20px;
+    overflow: visible;
+    text-transform: none;
+    appearance: button;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: none;
+    border: $borderpixel solid $backgroundcolor;
+    background-color: $backgroundcolor;
+    color: $textcolor;
+    outline: none;
+    user-select: none;
+
+    &:hover {
+        transform: translate(-$borderpixel, -$borderpixel);
+        box-shadow: $shadowcolor $borderpixel $borderpixel;
+    }
+
+    &:active {
+        border-color: $shadowcolor;
+        box-shadow: none;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div.App {
+    width: 350px;
+    height: 450px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: var(--color2);
+    padding: 15px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+div.App.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 30px;
+
+    form.new-todo {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    div.logo-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s filter, 0.2s -webkit-filter, 0.2s -moz-filter;
+
+        img.logo {
+            width: 60%;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+        }
+
+        .task-icon {
+            font-size: 30px;
+            color: var(--color1);
+            margin-bottom: 35px;
+        }
+
+        &:hover {
+            filter: drop-shadow(0px 0px 10px var(--color10)) hue-rotate(15deg);
+            -webkit-filter: drop-shadow(0px 0px 10px var(--color10)) hue-rotate(15deg);
+            -moz-filter: drop-shadow(0px 0px 10px var(--color10)) hue-rotate(15deg);
+        }
+    }
+
+    footer.copyright {
+        display: block;
+        position: absolute;
+        bottom: 4px;
+        font-family: var(--fontfamily1);
+        user-select: none;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+
+        p.copyright-text {
+            color: var(--color15);
+            opacity: 0.6;
+            font-size: 12px;
+
+            a.copyright-link {
+                cursor: pointer;
+                font-weight: bold;
+                color: var(--color1);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+div.logo-container {
+    display: none;
+}
+
+footer.copyright {
+    display: none;
+}
