@@ -94,7 +94,13 @@ div.App.intro {
         width: 100%;
         align-items: center;
         justify-content: center;
-        transition: 0.2s filter, 0.2s -webkit-filter, 0.2s -moz-filter;
+        margin-bottom: 10px;
+        transition: 0.1s transform;
+        -moz-transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        transform: rotate(-5deg);
 
         img.logo {
             width: 60%;
@@ -104,16 +110,22 @@ div.App.intro {
             -o-user-drag: none;
         }
 
-        .task-icon {
-            font-size: 30px;
-            color: var(--color1);
-            margin-bottom: 35px;
+        img.logo-icon {
+            width: 12%;
+            margin-right: 5px;
+
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
         }
 
         &:hover {
-            filter: drop-shadow(0px 0px 10px var(--color10));
-            -webkit-filter: drop-shadow(0px 0px 10px var(--color10));
-            -moz-filter: drop-shadow(0px 0px 10px var(--color10));
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
         }
     }
 

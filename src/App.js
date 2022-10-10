@@ -15,8 +15,7 @@ import Tools from './components/Tools';
 import Filter from './components/Filter';
 import React from 'react';
 import logo from './images/nextodo.png'
-import { RiTodoLine } from "react-icons/ri";
-
+import logoICON from './images/logoicon.png'
 
 function App() {
     const [todoLIST, setTODOlist] = React.useState(getLIST())
@@ -59,8 +58,8 @@ function App() {
         <div className={todoLIST.length > 0 ? "App" : "App intro"}>
 
             <div className='logo-container'>
+                <img className='logo-icon' src={logoICON} alt="Nextodo Icon" />
                 <img className='logo' src={logo} alt="Nextodo Logo" />
-                <RiTodoLine className='task-icon' />
             </div>
 
             <NewTodo
