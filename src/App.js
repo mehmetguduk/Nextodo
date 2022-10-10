@@ -4,6 +4,7 @@
     https://github.com/mehmetguduk
 */
 
+import './styles/background.scss';
 import './styles/style.scss';
 import './styles/form.scss';
 import './styles/tools.scss';
